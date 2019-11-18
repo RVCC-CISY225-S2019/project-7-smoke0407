@@ -1,0 +1,306 @@
+/*
+styles.css 
+CSS for IDMX 225 Project 5
+*/
+
+/* Base */
+
+/*
+Explain below rules: The below rules set the font to Montserrat and it 
+includes sans serif which is a type of writing style which does not have
+extending features called Serfis at the end of strokes. Then the image is 
+set to a max width of 100% which means it cant get any bigger than 
+100% of its size.
+*/
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*
+Explain below rules: The below code sets the header to the font 
+Merriweather and sets the style to serif. This is the opposite of the sans
+serif, with a different font. This is set to h2 which is the second biggest
+header. 
+
+*/
+
+h1,
+h2 {
+  font-family: "Merriweather", serif;
+}
+
+/* Styling */
+
+/* 
+Explain below rules: The below rule just aligns the text to the center of
+the page. The .content command tells the web page to align all the content/
+text to the center that is typed in (my information). 
+
+*/
+
+.content {
+  text-align: center;
+}
+
+/* 
+Explain below rules: The .page-title command sets the title of the page 
+to the style in the below command. In this case, it is told to be displayed
+in line, which means that the text is inside the current block on the same 
+line. The font size command tells the page to display 2 rem. The rem is equal to the 
+computed value of font-size on the root element. When specified on the font-size 
+property of the root element, the rem units refer to the property's initial 
+value. The vertical-align property in CSS controls how elements set next to each 
+other on a line are lined up. So this code sets the alignment to the top 
+of the page. 
+
+ */
+
+.page-title {
+  display: inline;
+  font-size: 2rem;
+  vertical-align: top;
+}
+
+/* 
+ Explain below rules: The below code is a font setter which sets the font
+ on the page to merriweather and in the style serif. The page downloads the
+ font and displays it as needed on the page. The text is aligned to the left
+ and the margin is set to 1rem.
+
+ */
+
+.iama {
+  font-family: "Merriweather", serif;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+/* 
+ Explain below rules: The below code sets the font size to 1.2 rem which is 
+ how big the .my-info part will be. The padding command creates space around 
+ an element's content, inside of any defined margins and borders. They are set
+ using lengths or percentages and cannot have negative values. 
+
+ */
+
+.my-info {
+  font-size: 1.2em;
+  padding: 0 2rem;
+}
+
+/*
+ Explain below rules: The .my-picture command refers to the picture that 
+ is in the web page, the code in the brackets is how to set it. This picture
+ is set with a width of 25% and a border of 2px with white. Then the 
+ border-radius command sets the border to 50%. 
+
+ */
+
+.my-picture {
+  width: 25%;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+/*
+ Explain below rules: The code shown below sets the footer to a 
+ background color of the top and bottom portions to purple. Then the color
+ command sets the middle, or body part, to white. The padding command 
+ sets a barrier around the text to space it out. 
+
+ */
+
+.hero,
+.footer {
+  background-color: rgb(43, 10, 73);
+  color: #ffffff;
+  padding: 1rem 2rem;
+}
+
+/*
+ Explain below rules: These rules set the footer to a desired font and size.
+ The text-align command determines where the text will be placed in regards
+ to left, center, or right. In this case it is set for center, so the text
+ will show up centered on the page and in the footer. The font-size sets the size
+ of the text, while the padding command sets the padding/space around the text 
+ itself. 
+
+ */
+
+.footer {
+  text-align: center;
+  font-size: 1rem;
+  padding: 4rem 2rem;
+}
+
+/* Responsive Web Design */
+
+h2 {
+  padding-left: 1rem;
+}
+
+figcaption {
+  margin: 0 2rem;
+}
+
+/* hero */
+
+/*
+Changing the font size for the elements of the classes. Putting a margin
+of 0 on the top and bottom and a margin of 1rem on the sides. Says my name
+and my location will take those rules.  
+*/
+
+.my-name,
+.my-location {
+  font-size: 1.25rem;
+  margin: 0 1rem;
+}
+
+/* article */
+
+/*
+comment
+*/
+
+.story {
+  padding: 2rem 0;
+}
+
+.story h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.story p {
+  margin: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+/* layout */
+
+/* mobile is the default layout (no media queries needed) */
+
+/*
+comment
+*/
+
+.about-content {
+  display: grid;
+  grid-template-columns: 3fr 4fr 3fr;
+  justify-items: center;
+}
+
+.iama,
+.my-info {
+  grid-column: 2/3;
+  font-size: 2rem;
+}
+
+.iama {
+  justify-self: left;
+}
+
+.my-info {
+  justify-self: right;
+}
+
+/* tablet layout >= 48rem (768px) */
+@media screen and (min-width: 48rem) {
+
+  /*
+  comment
+  */
+
+  .page-title {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .my-name,
+  .my-location {
+    font-size: 1.5rem;
+  }
+
+  figure {
+    margin: 1rem;
+  }
+
+  /*
+   comment
+  */
+
+  .gallery figure {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  figcaption {
+    font-size: 1.5rem;
+  }
+}
+
+/* wide screen layout 90rem (1440px) */
+@media screen and (min-width: 90rem) {
+  /*
+  comment
+  */
+  .my-picture {
+    max-width: 20rem;
+  }
+
+  /*
+  comment
+  */
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+  }
+
+  .gallery h2 {
+    grid-column: 1/4;
+  }
+
+  .gallery hr {
+    display: none;
+  }
+
+  .gallery figure {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  figcaption {
+    padding: 3rem;
+    font-size: 1.5rem;
+  }
+
+  /*
+  comment
+  */
+
+  .story {
+    display: grid;
+    grid-template-columns: 1fr 40rem 1fr;
+  }
+
+  .story h2 {
+    grid-column: 1/4;
+  }
+  
+  .story p {
+    grid-column: 2/3;
+    line-height: 1.5;
+  }
+}
