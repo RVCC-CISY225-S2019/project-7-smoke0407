@@ -1,10 +1,10 @@
-## Project 6
+## Project 7
 
-### Project 6 is amazing.
+### Project 7 is amazing.
 
 ### Instructions
 
-Responsive Web Design with Media Queries 
+Add form to web page 
 
 ### Resources
 
